@@ -32,6 +32,6 @@ app.listen(4070, '0.0.0.0',(error)=>{
 
 })
 
-app.use('/home',(req,res)=>{
+app.use('/',(req,res)=>{
     res.send("<h1> Welcome to ruby resturant");
 })
