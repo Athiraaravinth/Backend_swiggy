@@ -10,6 +10,8 @@ const path = require('path');
 
 const app = express();
 
+const PORT =  process.env.PORT || 4000;
+
 dotEnv.config();
 
 mongoose.connect(process.env.MONGO_URI)
@@ -22,15 +24,15 @@ app.use('/firm',firmRoutes);
 app.use('/product',productRoutes);
 app.use('/uploads',express.static('uploads'));
 
-app.listen(4070, "localhost",(error)=>{
+app.listen(PORT, "0.0.0.0",(error)=>{
     if(error){
         console.log(`server not running`)
     }else{
-        console.log(`server started and running 4070 `)
+        console.log(`server started and running 4000 `)
     }
 
 })
 
-app.use('/home',(req,res)=>{
+app.use('/',(req,res)=>{
     res.send("<h1> Welcome to ruby resturant");
 })
