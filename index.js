@@ -28,7 +28,7 @@ app.listen(PORT, '0.0.0.0',(error)=>{
     if(error){
         console.log(`server not running`)
     }else{
-        console.log(`server started and running 4000 `)
+        console.log(`server started and running 4070 `)
     }
 
 })
