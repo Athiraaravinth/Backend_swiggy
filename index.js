@@ -10,7 +10,7 @@ const path = require('path');
 
 const app = express();
 
-const PORT =  process.env.PORT || 4000;
+const PORT = process.env.PORT || 4070
 
 dotEnv.config();
 
@@ -24,7 +24,7 @@ app.use('/firm',firmRoutes);
 app.use('/product',productRoutes);
 app.use('/uploads',express.static('uploads'));
 
-app.listen(PORT, "0.0.0.0",(error)=>{
+app.listen(PORT, '0.0.0.0',(error)=>{
     if(error){
         console.log(`server not running`)
     }else{
